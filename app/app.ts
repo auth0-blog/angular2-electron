@@ -67,7 +67,7 @@ export class App {
 
   imageStats() {
 
-    let sizes:Array<Number> = [];
+    let sizes:Array<number> = [];
     let totalSize:number = 0;
     
     this
