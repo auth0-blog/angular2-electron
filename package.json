@@ -18,7 +18,7 @@
     "webpack-dev-server": "^1.14.0"
   },
   "dependencies": {
-    "angular2": "2.0.0-alpha.52",
+    "angular2": "2.0.0-alpha.53",
     "bootstrap": "^3.3.6",
     "gulp": "^3.9.0"
   }

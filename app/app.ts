@@ -1,4 +1,6 @@
-import {bootstrap, Component, Pipe, PipeTransform} from 'angular2/angular2';
+import {bootstrap} from 'angular2/platform/browser';
+import {Component, Pipe, PipeTransform} from 'angular2/core';
+import {NgFor} from 'angular2/common';
 
 @Pipe({ name: 'byteFormat'})
 class ByteFormatPipe implements PipeTransform {
