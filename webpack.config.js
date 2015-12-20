@@ -9,9 +9,7 @@ module.exports = {
   entry: {
     'angular2': [
       'rxjs',
-      'zone.js',
       'reflect-metadata',
-      'angular2/angular2',
       'angular2/core',
       'angular2/router',
       'angular2/http'
