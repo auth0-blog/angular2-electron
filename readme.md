@@ -172,7 +172,7 @@ export class App {
 bootstrap(App);
 ```
 
-## What is Auth0?
+## License
 
 MIT
 
