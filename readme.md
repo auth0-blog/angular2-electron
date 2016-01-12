@@ -30,7 +30,7 @@ The Electron configuration is contained in `app/main.js`.
 ```js
 // app/main.js
 
-var app = require('app'); 
+var app = require('app');
 
 // browser-window creates a native window
 var BrowserWindow = require('browser-window');
@@ -71,7 +71,7 @@ The entry point for the app is the `index.html` file within the `app` directory.
     <script src="../build/common.js"></script>
     <script src="../build/angular2.js"></script>
     <script src="../build/app.js"></script>
-  </body> 
+  </body>
 ```
 
 The Angular 2 app uses TypeScript and the Webpack configuration is set up to place the transpiled JavaScipt in the `build` directory.
@@ -103,9 +103,9 @@ class ByteFormatPipe implements PipeTransform {
     <h1>Total Images: {{ imageStats().count }}</h1>
     <h1>Total Size: {{ imageStats().size | byteFormat}}</h1>
 
-    <div 
-      (dragover)="false" 
-      (dragend)="false" 
+    <div
+      (dragover)="false"
+      (dragend)="false"
       (drop)="handleDrop($event)"
       style="height: 300px; border: 5px dotted #ccc;">
       <p style="margin: 10px; text-align: center">
@@ -124,7 +124,7 @@ class ByteFormatPipe implements PipeTransform {
         <p>{{image.size | byteFormat}}</p>
       </div>
     </div>
-  ` 
+  `
 })
 
 export class App {
@@ -152,7 +152,7 @@ export class App {
 
     let sizes:Array<Number> = [];
     let totalSize:number = 0;
-    
+
     this
       .images
       .forEach((image:File) => sizes.push(image.size));
@@ -164,17 +164,13 @@ export class App {
       size: totalSize,
       count: this.images.length
     }
-    
+
   }
 
 }
 
 bootstrap(App);
 ```
-
-## License
-
-MIT
 
 ## What is Auth0?
 
@@ -192,6 +188,14 @@ Auth0 helps you to:
 1. Go to [Auth0](https://auth0.com) and click Sign Up.
 2. Use Google, GitHub or Microsoft Account to login.
 
+## Issue Reporting
+
+If you have found a bug or if you have a feature request, please report them at this repository issues section. Please do not report security vulnerabilities on the public GitHub issue tracker. The [Responsible Disclosure Program](https://auth0.com/whitehat) details the procedure for disclosing security issues.
+
 ## Author
 
-[Auth0](https://auth0.com)
+[Auth0](auth0.com)
+
+## License
+
+This project is licensed under the MIT license. See the [LICENSE](LICENSE) file for more info.
