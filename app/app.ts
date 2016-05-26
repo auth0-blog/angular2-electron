@@ -1,6 +1,6 @@
-import {bootstrap} from 'angular2/platform/browser';
-import {Component, Pipe, PipeTransform} from 'angular2/core';
-import {NgFor} from 'angular2/common';
+import {bootstrap} from '@angular/platform-browser-dynamic';
+import {Component, Pipe, PipeTransform} from '@angular/core';
+import {NgFor} from '@angular/common';
 
 @Pipe({ name: 'byteFormat'})
 class ByteFormatPipe implements PipeTransform {
@@ -22,9 +22,9 @@ class ByteFormatPipe implements PipeTransform {
     <h1>Total Images: {{ imageStats().count }}</h1>
     <h1>Total Size: {{ imageStats().size | byteFormat}}</h1>
 
-    <div 
-      (dragover)="false" 
-      (dragend)="false" 
+    <div
+      (dragover)="false"
+      (dragend)="false"
       (drop)="handleDrop($event)"
       style="height: 300px; border: 5px dotted #ccc;">
       <p style="margin: 10px; text-align: center">
@@ -43,7 +43,7 @@ class ByteFormatPipe implements PipeTransform {
         <p>{{image.size | byteFormat}}</p>
       </div>
     </div>
-  ` 
+  `
 })
 
 export class App {
@@ -71,7 +71,7 @@ export class App {
 
     let sizes:Array<number> = [];
     let totalSize:number = 0;
-    
+
     this
       .images
       .forEach((image:File) => sizes.push(image.size));
@@ -83,7 +83,7 @@ export class App {
       size: totalSize,
       count: this.images.length
     }
-    
+
   }
 
 }
