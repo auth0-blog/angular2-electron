@@ -79,9 +79,9 @@ The Angular 2 app uses TypeScript and the Webpack configuration is set up to pla
 ```ts
 // app/app.ts
 
-import {bootstrap} from 'angular2/platform/browser';
-import {Component, Pipe, PipeTransform} from 'angular2/core';
-import {NgFor} from 'angular2/common';
+import {bootstrap} from ''@angular/platform-browser-dynamic';
+import {Component, Pipe, PipeTransform} from '@angular/core';
+import {NgFor} from '@angular/common';
 
 @Pipe({ name: 'byteFormat'})
 class ByteFormatPipe implements PipeTransform {
