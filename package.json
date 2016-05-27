@@ -11,7 +11,7 @@
   "author": "Auth0",
   "license": "MIT",
   "devDependencies": {
-    "electron-prebuilt": "^0.35.4",
+    "electron-prebuilt": "^1.2.0",
     "es6-shim": "^0.34.0",
     "ts-loader": "^0.8.2",
     "typescript": "^1.8.10",
