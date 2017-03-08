@@ -1,0 +1,22 @@
+<h1>Total Images: {{ imageStats().count }}</h1>
+<h1>Total Size: {{ imageStats().size | byteFormat}}</h1>
+<div
+  (dragover)="false"
+  (dragend)="false"
+  (drop)="handleDrop($event)"
+  style="height: 300px; border: 5px dotted #ccc;">
+  <p style="margin: 10px; text-align: center">
+    <strong>Drop Your Images Here</strong>
+  </p>
+</div>
+<div class="media" *ngFor="let image of images">
+  <div class="media-left">
+    <a href="#">
+      <img class="media-object" src="{{image.path}}" style="max-width:200px">
+    </a>
+  </div>
+  <div class="media-body">
+    <h4 class="media-heading">{{image.name}}</h4>
+    <p>{{image.size | byteFormat}}</p>
+  </div>
+</div>
